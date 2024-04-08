@@ -13,8 +13,8 @@ export const getProducts = async (q) => {
   const page = await browser.newPage();
 
   await page.goto(`https://www.globus.de/produkte/search?query=${q}`, {
-    timeout: 60000,
-    waitUntil: "networkidle0",
+    timeout: 2000,
+    waitUntil: "networkidle2",
   });
 
   const products = await page.evaluate(() => {
